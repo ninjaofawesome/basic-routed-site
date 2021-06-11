@@ -1,10 +1,14 @@
 import Wrapper from '../../components/Wrapper';
+import Header from '../../components/Header';
 
 const App = () => {
   return (
+    <>
+    <Header/>
     <Wrapper>
-      <h1>Hello world</h1>
+      Hello world
     </Wrapper>
+    </>
   );
 }
 
