@@ -3,8 +3,15 @@ import ReactDOM from 'react-dom';
 import ReactGA from 'react-ga';
 import { createBrowserHistory } from 'history';
 import { Router } from 'react-router-dom';
-import {GlobalStyle} from './globalStyles';
+import { GlobalStyle } from './utils/globalStyles';
 import App from './pages/App/App';
+
+const trackingId = process.env.REACT_APP_TRACKING_ID; 
+ReactGA.initialize(trackingId);
+ReactGA.set({
+  // any data that is relevant to the user session
+  // that you would like to track with google analytics
+})
 
 const history = createBrowserHistory();
 
