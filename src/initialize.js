@@ -1,7 +1,7 @@
 import ReactGA from 'react-ga';
 import auth from './auth.js'; // Sample authentication provider
 
-const trackingId = "UA-1234567890-1"; // Replace with your Google Analytics tracking ID
+const trackingId = "G-BQ8DVVXZM4"; // Replace with your Google Analytics tracking ID
 ReactGA.initialize(trackingId);
 ReactGA.set({
   userId: auth.currentUserId(),

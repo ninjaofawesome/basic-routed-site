@@ -1,17 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import ReactGA from 'react-ga';
+import { createBrowserHistory } from 'history';
+import { Router } from 'react-router-dom';
+import {GlobalStyle} from './globalStyles';
 import App from './pages/App/App';
-import reportWebVitals from './reportWebVitals';
 
-ReactDOM.render(
-  <React.StrictMode>
+const history = createBrowserHistory();
+
+// Initialize google analytics page view tracking
+history.listen(location => {
+  ReactGA.set({ page: location.pathname }); // Update the user's current page
+  ReactGA.pageview(location.pathname); // Record a pageview for the given page
+});
+
+const AppComponent = () => (
+  <Router history={history}>
+    <GlobalStyle  />
     <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+  </Router>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+ReactDOM.render(<AppComponent />, document.getElementById('root'));
