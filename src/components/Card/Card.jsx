@@ -18,12 +18,12 @@ const Card = (props) => {
 
 Card.props = {
 	children: <div />,
-	direction: true
+	vertical: true
 };
 
 Card.defaultProps = {
 	children: PropTypes.node,
-	directipn: PropTypes.bool
+	vertical: PropTypes.bool
 };
 
 export default Card;
