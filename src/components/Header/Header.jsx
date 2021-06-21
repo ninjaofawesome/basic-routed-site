@@ -1,11 +1,34 @@
-import React from 'react';
+import React, { Component } from 'react';
+import Menu from '../Menu';
 import { HeaderContainer } from './styled';
 
-const Header = () => (
-	<HeaderContainer>
-		<h2>Menu</h2>
-	</HeaderContainer>
-);
+class Header extends Component {
+
+	constructor() {
+	    super();
+
+	    this.state = {
+	      visible: false,
+	    };
+
+	    this.toggleMenu = this.toggleMenu.bind(this);
+	}
+
+	toggleMenu() {
+		this.setState({ visible: !this.state.visible })
+	}
+
+	render() {
+	
+		return (
+			<HeaderContainer>
+				<button onClick={this.toggleMenu}>Menu</button>
+				<Menu />
+			</HeaderContainer>
+		);
+	}
+	
+}
 
 
 export default Header;

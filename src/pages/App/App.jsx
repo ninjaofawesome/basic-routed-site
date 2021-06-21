@@ -12,6 +12,10 @@ const App = () => {
         <Image />
         <h2>Hello world</h2>
       </Card>
+      <Card>
+        <Image />
+        <h2>Hello world</h2>
+      </Card>
     </Wrapper>
     </>
   );
