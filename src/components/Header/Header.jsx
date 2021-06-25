@@ -19,11 +19,10 @@ class Header extends Component {
 	}
 
 	render() {
-	
 		return (
 			<HeaderContainer>
 				<button onClick={this.toggleMenu}>Menu</button>
-				<Menu />
+				<Menu isVisible={this.state.visible} />
 			</HeaderContainer>
 		);
 	}
