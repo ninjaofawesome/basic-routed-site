@@ -11,8 +11,9 @@ const Card = (props) => {
 		vertical 
 	} = props;
 
+
 	return (
-		<CardWrapper vertical>{children}</CardWrapper>
+		<CardWrapper vertical={vertical}>{children}</CardWrapper>
 	);
 };
 

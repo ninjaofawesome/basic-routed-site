@@ -5,10 +5,8 @@ import { StyledMenu } from './styled';
 
 const Menu = ({ isVisible }) => (
 	<StyledMenu isVisible={isVisible} >
-		<ul>
-			<li>Hello</li>
-			<li>World</li>
-		</ul>
+		<li>Hello</li>
+		<li>World</li>
 	</StyledMenu>
 );
 
