@@ -6,17 +6,26 @@ import Image from '../../components/Image';
 import { AppWrapper } from './styled';
 
 const App = () => {
+  const image = 'http://placekitten.com/200/300';
   return (
     <>
     <Header/>
     <AppWrapper>
       <Wrapper>
         <Card  vertical={false}>
-          <Image />
+          <Image 
+            img={image}
+            height='200px'
+            width='200px'
+           />
           <h2>Hello world</h2>
         </Card>
         <Card>
-          <Image />
+            <Image 
+            img={image}
+            height='200px'
+            width='200px'
+           />
           <h2>Hello world</h2>
         </Card>
       </Wrapper>
