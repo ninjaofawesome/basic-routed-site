@@ -14,7 +14,7 @@ const App = () => {
       <Wrapper>
         <Card  vertical={false}>
           <Image 
-            img={image}
+            background={image}
             height='200px'
             width='200px'
            />
@@ -22,7 +22,7 @@ const App = () => {
         </Card>
         <Card>
             <Image 
-            img={image}
+            background={image}
             height='200px'
             width='200px'
            />

@@ -3,24 +3,29 @@ import PropTypes from 'prop-types';
 import { ImageComponent } from './styled';
 
 const Image = props => {
-
 	const {
-		img,
+		background,
 		width,
 		height
 	} = props;
 
-	return <ImageComponent img={img} height={height} width={width} />
+	return (
+		<ImageComponent 
+			background={background} 
+			height={height} 
+			width={width} 
+		/>
+	); 
 };
 
 Image.propTypes = {
-	img: PropTypes.string,
+	background: PropTypes.string,
 	width: PropTypes.string,
 	height: PropTypes.string
 };
 
 Image.defaultProps = {
-	img: '',
+	background: '',
 	width: '',
 	height: ''
 };
