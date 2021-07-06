@@ -3,8 +3,7 @@ import ReactDOM from 'react-dom';
 import ReactGA from 'react-ga';
 import { createBrowserHistory } from 'history';
 import { Router } from 'react-router-dom';
-import { GlobalStyle } from './utils/globalStyles';
-import App from './pages/App/App';
+import routes from './utils/routes';
 
 const trackingId = process.env.REACT_APP_TRACKING_ID; 
 ReactGA.initialize(trackingId);
@@ -22,10 +21,7 @@ history.listen(location => {
 });
 
 const AppComponent = () => (
-  <Router history={history}>
-    <GlobalStyle  />
-    <App />
-  </Router>
+  <Router history={history} routes={routes} />
 );
 
 ReactDOM.render(<AppComponent />, document.getElementById('root'));
