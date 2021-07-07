@@ -1,10 +1,11 @@
 import React from 'react';
 import ReactGA from 'react-ga';
 import { createBrowserHistory } from 'history';
-import { Router, Route } from 'react-router';
+import { Router, Route} from 'react-router';
 import { GlobalStyle } from './globalStyles';
 import App from '../pages/App';
 import About from '../pages/About';
+import Header from '../components/Header';
 
 const trackingId = process.env.REACT_APP_TRACKING_ID; 
 ReactGA.initialize(trackingId);
@@ -25,12 +26,13 @@ history.listen(location => {
 const createRoutes = () => (
   <Router history={history}>
     <GlobalStyle />
-    <Route path="/">
-      <App />
-    </Route>
-    <Route path="about">
-      <About />
-    </Route>
+      <Header />
+      <Route path="/">
+        <App />
+      </Route>
+      <Route path="/about">
+        <About />
+      </Route>
   </Router>
 );
 

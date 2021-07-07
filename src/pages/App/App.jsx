@@ -1,5 +1,4 @@
 import Wrapper from '../../components/Wrapper';
-import Header from '../../components/Header';
 import Card from '../../components/Card';
 import Image from '../../components/Image';
 
@@ -8,8 +7,6 @@ import { AppWrapper } from './styled';
 const App = () => {
   const image = 'http://placekitten.com/200/300';
   return (
-    <>
-    <Header/>
     <AppWrapper>
       <Wrapper>
         <Card  vertical={false}>
@@ -30,7 +27,6 @@ const App = () => {
         </Card>
       </Wrapper>
     </AppWrapper>
-    </>
   );
 }
 
