@@ -28,11 +28,11 @@ const createRoutes = () => (
     <GlobalStyle />
       <Header />
       <Switch>
-        <Route path='/'>
-          <App />
-        </Route>
         <Route path='/about'>
           <About />
+        </Route>
+        <Route path='/'>
+          <App />
         </Route>
       </Switch>
   </Router>
