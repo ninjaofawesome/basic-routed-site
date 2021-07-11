@@ -4,7 +4,7 @@ import Image from '../../components/Image';
 
 import { AppWrapper } from './styled';
 
-const App = () => {
+const AppPage = () => {
   const image = 'http://placekitten.com/200/300';
   return (
     <AppWrapper>
@@ -30,4 +30,4 @@ const App = () => {
   );
 }
 
-export default App;
+export default AppPage;
